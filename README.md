@@ -23,32 +23,32 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
+Load balancing ensures that the application will be highly fault tolerant, in addition to restricting traffic to the network.
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system logs.
 - _TODO: What does Filebeat watch for?_
 - _TODO: What does Metricbeat record?_
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Name   | Function  | IP Address     | Operating System |
+|--------|-----------|----------------|------------------|
+| NU-VM  | Jump Box  | 104.208.33.190 | Ubuntu           |
+| Web-1  | Webserver | 10.0.0.7       | Ubuntu           |
+| Web-2  | Webserver | 10.0.0.6       | Ubuntu           |
+| Elk-VM | Elk Stack | 10.1.0.4       | Ubuntu           |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the NU-VM machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+-	24.13.45.184
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by SSH.
+-NU-VM 10.0.0.8
 
 A summary of the access policies in place can be found in the table below.
 
@@ -61,12 +61,12 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+-It allows me to automate and mass deploy to several machines.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+-Configured the target VM (the machine being configured) to use more memory. 
+-Installed Docker
+-
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 

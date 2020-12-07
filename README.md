@@ -4,7 +4,7 @@ Folder of my personal work and examples
 
 The files in this repository were used to configure the network depicted below.
 
-![Diagram](Diagrams/Web Sheet.png)
+![Diagram](https://github.com/tajambois/My-Portfolio/blob/main/Diagrams/Web%20Sheet.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 

@@ -4,15 +4,15 @@ Folder of my personal work and examples
 
 The files in this repository were used to configure the network depicted below.
 
-![Diagram](https://github.com/tajambois/My-Portfolio/blob/main/Diagrams/Web%20Sheet.png)
+![Diagram](https://github.com/tajambois/My-Portfolio/blob/main/Diagrams/Elk_Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
-### LInk to Elk Playbook
-(https://github.com/tajambois/My-Portfolio/blob/main/Ansible/elk-playbook.yml.yml)
+### Link to Elk Playbook
+(https://github.com/tajambois/My-Portfolio/blob/main/Ansible/elk-playbook.yml)
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -25,7 +25,7 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly fault tolerant, in addition to restricting traffic to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+- Load balancers increase the difficulty of a DDoS attack, . The andvantage of a jumpbox is the singular source of entry into enviroment,through a whitelisted IP.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system logs.
 - _TODO: What does Filebeat watch for?_
@@ -65,9 +65,11 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 -It allows me to automate and mass deploy to several machines.
 
 The playbook implements the following tasks:
--Configured the target VM (the machine being configured) to use more memory. 
--Installed Docker
--
+- Installed Docker
+- Install pip3
+- Install Docker Python Module
+- Configured the target VM (the machine being configured) to use more memory.
+- Download and Launch Container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -78,18 +80,18 @@ This ELK server is configured to monitor the following machines:
 - _TODO: List the IP addresses of the machines you are monitoring_
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- FileBeat
 
-These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+FileBeat allows us to collect the following information from each machine:
+- System logs of
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the config file to /etc/ansible/files.
+- Update the config file to include the IP address of my webservers.
+- Run the playbook, and navigate to home/add data/ system logs to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_

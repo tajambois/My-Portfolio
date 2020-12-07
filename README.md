@@ -26,6 +26,7 @@ Load balancing ensures that the application will be highly fault tolerant, in ad
 - Load balancers increase the difficulty of a DDoS attack, usiong reporting a security measures set by the administrators. The andvantage of a jumpbox is the singular source of entry into enviroment, via a whitelisted IP.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system logs.
+
 -FileBeat, records
 - _TODO: What does Metricbeat record?_
 
@@ -50,11 +51,12 @@ Machines within the network can only be accessed by SSH.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name   | Publicly Accessible | Allowed IP Addresses |
+|--------|---------------------|----------------------|
+| NU-VM  | Yes                 | 24.13.45.184         |
+| Web-1  | Yes - Port 80       | 10.0.0.8             |
+| Web-2  | Yes - Port 80       | 10.0.0.8             |
+| Elk-VM | Yes                 | 24.13.45.184         |
 
 ### Elk Configuration
 
@@ -70,7 +72,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+  ![](https://github.com/tajambois/My-Portfolio/blob/main/Images/Docker%20PS.png
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:

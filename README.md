@@ -6,9 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![Diagram](https://github.com/tajambois/My-Portfolio/blob/main/Diagrams/Elk_Diagram.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
-
-### Link to Elk Playbook
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the elk-playbook.yml file may be used to install only certain pieces of it, such as Filebeat.
 (https://github.com/tajambois/My-Portfolio/blob/main/Ansible/elk-playbook.yml)
 
 This document contains the following details:
@@ -25,21 +23,20 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly fault tolerant, in addition to restricting traffic to the network.
-- Load balancers increase the difficulty of a DDoS attack, . The andvantage of a jumpbox is the singular source of entry into enviroment,through a whitelisted IP.
+- Load balancers increase the difficulty of a DDoS attack, usiong reporting a security measures set by the administrators. The andvantage of a jumpbox is the singular source of entry into enviroment, via a whitelisted IP.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system logs.
-- _TODO: What does Filebeat watch for?_
+-FileBeat, records
 - _TODO: What does Metricbeat record?_
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name   | Function  | IP Address     | Operating System |
-|--------|-----------|----------------|------------------|
-| NU-VM  | Jump Box  | 104.208.33.190 | Ubuntu           |
-| Web-1  | Webserver | 10.0.0.7       | Ubuntu           |
-| Web-2  | Webserver | 10.0.0.6       | Ubuntu           |
-| Elk-VM | Elk Stack | 10.1.0.4       | Ubuntu           |
+| Name   | Function  | IP Address              | Operating System |
+|--------|-----------|-------------------------|------------------|
+| NU-VM  | Jump Box  | 104.208.33.190/10.0.0.8 | Ubuntu           |
+| Web-1  | Webserver | 10.0.0.7                | Ubuntu           |
+| Web-2  | Webserver | 10.0.0.6                | Ubuntu           |
+| Elk-VM | Elk Stack | 138.91.197.195/10.1.0.4 | Ubuntu           |
 
 ### Access Policies
 

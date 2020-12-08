@@ -25,10 +25,10 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly fault tolerant, in addition to restricting traffic to the network.
 - Load balancers increase the difficulty of a DDoS attack, usiong reporting a security measures set by the administrators. The andvantage of a jumpbox is the singular source of entry into enviroment, via a whitelisted IP.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system logs.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
 
--FileBeat, records
-- _TODO: What does Metricbeat record?_
+- Filebeat is a lightweight shipper for passing and centralizing log data. When installed on these servers, Filebeat monitors the log files, collects log events, and forwards them either to Kibana for indexing.
+- Metricbeat will be used will to periodically collect metrics from the operating system and from services running on the server. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
 The configuration details of each machine may be found below.
 
@@ -53,10 +53,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name   | Publicly Accessible | Allowed IP Addresses |
 |--------|---------------------|----------------------|
-| NU-VM  | Yes                 | 24.13.45.184         |
-| Web-1  | Yes - Port 80       | 10.0.0.8             |
-| Web-2  | Yes - Port 80       | 10.0.0.8             |
-| Elk-VM | Yes                 | 24.13.45.184         |
+| NU-VM  | Yes - Whitelist     | 24.13.45.184         |
+| Web-1  | NO - Port 80        | 10.0.0.8             |
+| Web-2  | NO - Port 80        | 10.0.0.8             |
+| Elk-VM | Yes - Port 5601     | 24.13.45.184         |
 
 ### Elk Configuration
 

@@ -61,7 +61,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
--It allows me to automate and mass deploy to several machines.
+- It allows me to mass deploy to several machines efficiently. This will create a uniform network.
 
 The playbook implements the following tasks:
 - Installed Docker
@@ -83,7 +83,7 @@ We have installed the following Beats on these machines:
 - FileBeat
 
 FileBeat allows us to collect the following information from each machine:
-- System logs of
+- System logs
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -97,5 +97,3 @@ _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - _Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._

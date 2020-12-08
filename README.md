@@ -89,11 +89,6 @@ FileBeat allows us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the config file to /etc/ansible/files.
-- Update the config file to include the IP address of my webservers.
-- Run the playbook, and navigate to home/add data/ system logs to check that the installation worked as expected.
-
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- Copy the config file to /etc/ansible/files. Run: https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml
+- Update the config file to include the IP address of my webservers. in the playbook, ensure host is set to correct group.
+- Run the playbook, and navigate to http://138.91.197:5601/app/kibana to check that the installation worked as expected.

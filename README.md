@@ -92,3 +92,4 @@ SSH into the control node and follow the steps below:
 - Copy the config file to /etc/ansible/files. Run: curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml
 - Update the config file to include the IP address of my webservers. In the playbook, ensure host is set to correct group you wish to record logs.
 - Run the playbook, and navigate to http://138.91.197:5601/app/kibana to check that the installation worked as expected.
+![](https://github.com/tajambois/My-Portfolio/blob/main/Images/filbeat%20playbook.png)
